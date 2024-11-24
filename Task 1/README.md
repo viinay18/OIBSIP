@@ -1,21 +1,39 @@
-Project Title: Data Cleaning Project
+Project Title: Comprehensive Data Cleaning of NYC Airbnb Dataset (2019)
+
 Description:
-This project demonstrates the process of cleaning and preparing a dataset for analysis. I worked with the New York City Airbnb Open Data (2019) to fix issues such as missing values, duplicates, and outliers, ensuring the data's accuracy, consistency, and reliability.
+The project entails cleaning and preparing the NYC Airbnb Open Data (2019) for high-quality analysis. It focuses on identifying and resolving issues such as missing data, duplicates, inconsistent formatting, and outliers to ensure an accurate, consistent, and reliable dataset.
 
 Dataset Overview:
-Source: New York City Airbnb Open Data
-Description: The dataset contains information about Airbnb listings in NYC, including property details, location, pricing, availability, and host details.
-Key Steps:
-Data Integrity: Ensured the dataset's accuracy and reliability.
-Missing Data Handling:
-Identified missing values using summary statistics.
-Imputed or removed missing values based on their relevance.
-Duplicate Removal:
-Detected duplicate records.
-Retained unique entries for accurate analysis.
-Standardization:
-Unified formatting for columns like price, availability, and location.
-Ensured consistent data types across the dataset.
-Outlier Detection:
-Used visualization (box plots, histograms) to identify outliers.
-Applied techniques to handle outliers appropriately.
+Source: NYC Airbnb Open Data (2019).
+Structure: Includes host information, property details, geographical locations, pricing, availability, and reviews.
+
+Detailed Key Steps:
+1) Exploratory Data Analysis (EDA):
+  Initial inspection of the dataset to identify key issues.
+  Used statistical summaries to highlight anomalies in columns like price, availability_365, and minimum_nights.
+
+2) Handling Missing Values:
+  Conducted column-wise checks for missing data.
+  Applied conditional imputation for numeric fields such as reviews_per_month.
+  Dropped irrelevant rows with excessive missing data, preserving data quality.
+
+3) Duplicate Records Removal:
+  Detected duplicate rows using the id column.
+  Ensured that unique listings were retained to avoid bias in analysis.
+
+4) Standardization and Formatting:
+  Normalized key columns (price, availability_365, etc.) to maintain consistency.
+  Ensured proper data types for numerical and categorical variables.
+  Uniform formatting of text columns like neighbourhood_group and room_type.
+
+5) Outlier Detection and Treatment:
+  Identified outliers using visualization tools like boxplots and histograms.
+  Applied z-score and IQR methods to detect and treat extreme values in critical columns such as price and minimum_nights.
+  Outliers were either capped, replaced, or excluded based on their potential impact.
+
+6) Data Validation:
+  Post-cleaning checks ensured the integrity and usability of the dataset.
+  Verified that no erroneous data persisted, particularly in critical columns.
+
+Outcome:
+A thoroughly cleaned and standardized dataset ready for analysis, ensuring reliable insights into NYC Airbnb trends and patterns. This work creates a foundation for robust decision-making in data-driven projects.
